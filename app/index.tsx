@@ -1,6 +1,9 @@
-import { Text, View } from "react-native";
+import { useState } from "react";
+import { View } from "react-native";
+import ToDoList from "../components/ToDoList";
 
 export default function Index() {
+  const [tasks, setTasks] = useState(["Do laundry", "Go to gym", "Walk dog"]);
   return (
     <View
       style={{
@@ -9,7 +12,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <ToDoList tasks={tasks} />
     </View>
   );
 }
